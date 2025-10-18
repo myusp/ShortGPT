@@ -6,7 +6,7 @@ services:
     image: short_gpt_docker:latest
     platform: linux/amd64
     env_file:
-      - .env
+      - stack.env
     ports:
       - "31415:31415"
     restart: unless-stopped
