@@ -1,0 +1,13 @@
+services:
+  shortgpt:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: short_gpt_docker:latest
+    platform: linux/amd64
+    env_file:
+      - .env
+    ports:
+      - "31415:31415"
+    restart: unless-stopped
+    tty: true
